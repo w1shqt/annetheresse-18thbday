@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>18th Birthday Invitation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins&display=swap" rel="stylesheet" />
+
+  <!-- Hide scrollbar -->
+  <style>
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Section 1: Header Image -->
+  <img src="images/1.png" alt="18th Birthday Header" class="fullwidth-img" />
+
+  <!-- Section 2: Full Screen Map -->
+  <div class="map-container">
+    <h1 class="map-heading">How to get there?</h1>
+    <div class="fullscreen-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15718.334836356116!2d123.7379289!3d13.3318585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a1ad93317ccb8f%3A0x3863e1edc606c1b1!2sMalilipot%2C%20Albay!5e0!3m2!1sen!2sph!4v1720700000000!5m2!1sen!2sph" 
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Event Location Map"
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- Section 3: QR Code Image -->
+  <img src="images/qr.png" alt="Scan to RSVP" class="fullwidth-img" />
+
+  <!-- Section 4: RSVP Form -->
+  <div class="rsvp-container">
+    <h1 class="rsvp-heading">RSVP</h1>
+    <div class="fullscreen-rsvp">
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSewFZuMv1KZjUSuZ8u021t8EfoFvLJwuBqbZgYxIiGyh_Uc0A/viewform?embedded=true"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="RSVP Form"
+      >
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Section 5: Final Banner -->
+  <img src="images/2.png" alt="Final Thank You Banner" class="fullwidth-img" />
+</body>
+</html>
