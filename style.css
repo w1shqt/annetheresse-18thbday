@@ -1,0 +1,202 @@
+/* ===== 18th Birthday Invitation Styles ===== */
+
+/* ===== BASE STYLES ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: url('images/bg.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #c6ae75;
+    overflow-x: hidden;
+}
+
+/* Make all text italic and bold */
+body, h1, h2, h3, h4, h5, h6, p, div, span {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.fullwidth-img {
+    width: 100%;
+    display: block;
+}
+
+/* ===== FULL SCREEN MAP CONTAINER ===== */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('images/bg.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.map-container::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.map-heading {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-family: 'Monotype Corsiva', cursive;
+    font-size: 2.5rem;
+    color: #c6ae75;
+    z-index: 3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.fullscreen-map {
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    z-index: 2;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.fullscreen-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fullscreen-map iframe:not([src=""]) {
+    opacity: 1;
+}
+
+/* ===== RSVP SECTION ===== */
+.rsvp-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('images/bg.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.rsvp-container::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.rsvp-heading {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-family: 'Monotype Corsiva', cursive;
+    font-size: 2.5rem;
+    color: #c6ae75;
+    z-index: 3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.fullscreen-rsvp {
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    z-index: 2;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.fullscreen-rsvp iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background: white;
+}
+
+.fullscreen-rsvp iframe:not([src=""]) {
+    opacity: 1;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 991px) {
+    .map-heading, .rsvp-heading {
+        font-size: 2rem;
+        top: 25px;
+        left: 25px;
+    }
+
+    .fullscreen-map, .fullscreen-rsvp {
+        top: 80px;
+        left: 25px;
+        right: 25px;
+        bottom: 25px;
+    }
+}
+
+@media (max-width: 767px) {
+    .map-heading, .rsvp-heading {
+        font-size: 1.8rem;
+        top: 20px;
+        left: 20px;
+    }
+
+    .fullscreen-map, .fullscreen-rsvp {
+        top: 70px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 575px) {
+    .map-heading, .rsvp-heading {
+        font-size: 1.5rem;
+        top: 15px;
+        left: 15px;
+    }
+
+    .fullscreen-map, .fullscreen-rsvp {
+        top: 60px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+    .map-heading, .rsvp-heading {
+        font-size: 1.8rem;
+        top: 15px;
+        left: 20px;
+    }
+
+    .fullscreen-map, .fullscreen-rsvp {
+        top: 50px;
+        left: 20px;
+        right: 20px;
+        bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .map-container, .rsvp-container {
+        background-attachment: scroll;
+    }
+}
